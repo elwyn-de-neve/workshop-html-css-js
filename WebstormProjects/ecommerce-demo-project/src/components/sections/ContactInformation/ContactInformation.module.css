@@ -1,0 +1,166 @@
+.contactInformation {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.infoCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.infoCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.infoIcon {
+    width: 2rem;
+    height: 2rem;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+}
+
+.infoTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.infoText {
+    font-style: normal;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.infoLink {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.infoLink:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.hoursList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hoursItem {
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+}
+
+.hoursItem:last-child {
+    margin-bottom: 0;
+}
+
+.mapContainer {
+    margin-bottom: 2rem;
+}
+
+.mapTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.mapPlaceholder {
+    height: 300px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    border: 2px dashed #d1d5db;
+}
+
+.mapIcon {
+    color: #9ca3af;
+    margin-bottom: 1rem;
+}
+
+.mapText {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.socialMedia {
+    text-align: center;
+}
+
+.socialTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.socialLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    background-color: #f9fafb;
+    border-radius: 9999px;
+    color: #4b5563;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.socialLink:hover {
+    background-color: #3b82f6;
+    color: white;
+}
+
+@media (min-width: 640px) {
+    .infoGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .infoGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

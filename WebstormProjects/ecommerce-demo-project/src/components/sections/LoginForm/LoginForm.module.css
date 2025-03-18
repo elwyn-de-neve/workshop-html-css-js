@@ -1,0 +1,71 @@
+.loginForm {
+    width: 100%;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+.inputWrapper input {
+    padding-left: 2.75rem;
+    width: 100%;
+}
+
+.inputError {
+    border-color: #ef4444;
+}
+
+.errorText {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.forgotPassword {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.forgotLink {
+    font-size: 0.875rem;
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.forgotLink:hover {
+    text-decoration: underline;
+}
+
+.submitButton {
+    width: 100%;
+}

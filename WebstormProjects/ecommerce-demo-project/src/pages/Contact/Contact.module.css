@@ -1,0 +1,53 @@
+.contactPage {
+    padding: 2rem 1rem;
+    background-color: #f9fafb;
+    min-height: 80vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pageHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pageTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.pageDescription {
+    font-size: 1.125rem;
+    color: #6b7280;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contactSections {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.formSection,
+.infoSection {
+    width: 100%;
+}
+
+/* Media queries for responsive layout */
+@media (min-width: 1024px) {
+    .contactSections {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .contactPage {
+        padding: 3rem 1rem;
+    }
+}

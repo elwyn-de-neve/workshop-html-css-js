@@ -1,0 +1,65 @@
+---
+description: 
+globs: *.jsx
+alwaysApply: false
+---
+# JSX-component Prompt
+
+Deze instructies gelden voor het maken van alle JSX-bestanden in ons e-commerce project. Volg de onderstaande stappen nauwgezet om consistente, herbruikbare en onderhoudbare componenten te creëren.
+
+## 1.1 Algemene Richtlijnen
+- **Single Responsibility:** Zorg ervoor dat elke component slechts één verantwoordelijkheid heeft.
+- **Kleine Bouwstenen:** Ontwikkel basiscomponenten (zoals knoppen, invoervelden, iconen) die later hergebruikt worden in grotere componenten. Vergelijkbaar met de componenten uit de ShadcnUI library.
+- **Functionele Componenten:** Gebruik functionele componenten en moderne ES6+ syntax.
+- **Modulair en Schaalbaar:** Plaats elk component in de juiste map (bijv. `components/ui`, `components/layout`, `components/sections`, of `pages`) conform de afgesproken projectstructuur.
+- **Import en Dependencies:** Importeer React, benodigde dependencies (zoals React Router DOM en Lucide icons) en de corresponderende CSS-module.
+
+## 1.2 Stappenplan voor een Nieuwe JSX-component
+1. **Component Type Bepalen:**
+   - Beslis of het een UI-element, layout-component, sectie of volledige pagina betreft.
+   - Plaats de component in de juiste map (bijv. `components/ui` voor knoppen of invoervelden).
+
+2. **Bestandsstructuur Aanmaken:**
+   - Maak een nieuw bestand aan met de naam van de component (bijv. `Button.jsx`).
+   - Zorg dat er ook een corresponderend CSS-module bestand is (bijv. `Button.module.css`).
+
+3. **Basis Component Opzetten:**
+   - Importeer React en eventuele noodzakelijke dependencies:
+     ```jsx
+     import React from 'react';
+     import styles from './Button.module.css';
+     // Importeer eventuele iconen of router-elementen indien nodig
+     ```
+   - Definieer de functionele component:
+     ```jsx
+     const Button = ({ children, onClick, ...props }) => {
+       return (
+         <button className={styles.button} onClick={onClick} {...props}>
+           {children}
+         </button>
+       );
+     };
+
+     export default Button;
+     ```
+
+4. **Minimal Logic & Single Responsibility:**
+   - Houd de logica in de component minimaal. Laat complexe logica (zoals state management of API-calls) over aan hogere componenten of custom hooks.
+   - Zorg dat de component duidelijk en specifiek is in zijn taak.
+
+5. **Herbruikbaarheid & Consistentie:**
+   - Gebruik duidelijke, beschrijvende namen voor componenten en props.
+   - Schrijf de component zodanig dat hij eenvoudig te hergebruiken is in verschillende delen van de applicatie.
+   - Voeg indien nodig PropTypes of TypeScript-interfaces toe voor duidelijke documentatie van de verwachte props.
+
+6. **Integratie met Router (indien van toepassing):**
+   - Als de component een navigatie-element is, zorg dan voor de juiste integratie met React Router DOM (bijv. gebruik `<Link />`).
+
+7. **Test & Review:**
+   - Integreer de component in een hogere-level pagina of layout om de werking te verifiëren.
+   - Zorg dat de component consistent is met de visuele en functionele richtlijnen van het project.
+
+## 1.3 Notities
+- Implementeer alleen de componenten die daadwerkelijk nodig zijn.
+- Zorg dat de componenten makkelijk te onderhouden zijn en volg altijd het principe van 'minimal logic'.
+

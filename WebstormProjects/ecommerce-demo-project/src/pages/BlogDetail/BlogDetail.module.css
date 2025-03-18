@@ -1,0 +1,101 @@
+.blogDetailPage {
+    padding: 2rem 1rem;
+    background-color: #f9fafb;
+    min-height: 80vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #f3f4f6;
+    border: none;
+    border-radius: 6px;
+    color: #4b5563;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.backButton:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+/* Loading state */
+.loadingState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    text-align: center;
+    color: #6b7280;
+}
+
+.spinner {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 3px solid #3b82f6;
+    width: 2rem;
+    height: 2rem;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error state */
+.errorState {
+    padding: 3rem;
+    text-align: center;
+    background-color: #fee2e2;
+    border-radius: 8px;
+    color: #b91c1c;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.errorState h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.errorState p {
+    margin-bottom: 1.5rem;
+}
+
+.errorState .backButton {
+    background-color: #ffffff;
+    border: 1px solid #b91c1c;
+}
+
+.errorState .backButton:hover {
+    background-color: #fef2f2;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    .blogDetailPage {
+        padding: 3rem 1rem;
+    }
+}

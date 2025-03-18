@@ -1,0 +1,6 @@
+.home {
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+/* Add any additional page-specific styles here */

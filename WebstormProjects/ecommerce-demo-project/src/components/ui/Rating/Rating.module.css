@@ -1,0 +1,78 @@
+.rating {
+    display: inline-flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.star {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+    transition: all 0.2s ease-in-out;
+}
+
+.star--filled {
+    color: var(--color-accent);
+}
+
+/* Interactive state */
+.star--interactive {
+    cursor: pointer;
+}
+
+.star--interactive:hover {
+    transform: scale(1.1);
+}
+
+.star--interactive:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* Sizes */
+.rating--small .star {
+    padding: 2px;
+}
+
+.rating--medium .star {
+    padding: 3px;
+}
+
+.rating--large .star {
+    padding: 4px;
+}
+
+/* Hover effect for interactive ratings */
+.rating--interactive:hover .star {
+    color: var(--text-light);
+}
+
+.rating--interactive .star:hover~.star {
+    color: var(--text-light);
+}
+
+.rating--interactive:hover .star:hover,
+.rating--interactive:hover .star:hover~.star {
+    color: var(--color-accent);
+}
+
+/* Animation */
+@keyframes starPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.star--filled {
+    animation: starPop 0.2s ease-in-out;
+}

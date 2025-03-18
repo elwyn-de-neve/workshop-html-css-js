@@ -1,0 +1,36 @@
+.cartPage {
+    padding: var(--spacing-xl) 0;
+}
+
+.cartLayout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.cartItemsContainer {
+    flex: 1;
+}
+
+.orderSummaryContainer {
+    width: 100%;
+}
+
+/* Responsive layout */
+@media (min-width: 1024px) {
+    .cartLayout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .cartItemsContainer {
+        flex: 1;
+    }
+
+    .orderSummaryContainer {
+        width: 380px;
+        flex-shrink: 0;
+        position: sticky;
+        top: var(--spacing-xl);
+    }
+}

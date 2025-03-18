@@ -1,0 +1,296 @@
+.filtersContainer {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filtersHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.filtersHeader h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+.closeButton {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #6b7280;
+}
+
+.clearFiltersButton {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: #f3f4f6;
+    border: none;
+    border-radius: 6px;
+    color: #4b5563;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clearFiltersButton:hover {
+    background-color: #e5e7eb;
+}
+
+/* Filter sections */
+.filterSection {
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1.25rem;
+}
+
+.filterSection:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.sectionHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #1f2937;
+    text-align: left;
+}
+
+.sectionHeader h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.sectionContent {
+    margin-top: 1rem;
+}
+
+/* Category list */
+.categoryList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categoryList li {
+    margin-bottom: 0.5rem;
+}
+
+.categoryButton {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: #4b5563;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.categoryButton:hover {
+    background-color: #f3f4f6;
+}
+
+.categoryButton.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Price range list */
+.priceRangeList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.priceRangeList li {
+    margin-bottom: 0.5rem;
+}
+
+.priceRangeButton {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: #4b5563;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.priceRangeButton:hover {
+    background-color: #f3f4f6;
+}
+
+.priceRangeButton.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Rating list */
+.ratingList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ratingList li {
+    margin-bottom: 0.5rem;
+}
+
+.ratingButton {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    border-radius: 4px;
+    color: #4b5563;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.ratingButton:hover {
+    background-color: #f3f4f6;
+}
+
+.ratingButton.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Checkbox groups */
+.checkboxGroup {
+    margin-bottom: 0.75rem;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox {
+    margin-right: 0.5rem;
+    accent-color: #3b82f6;
+}
+
+/* Mobile apply filters button */
+.mobileApplyFilters {
+    display: none;
+    margin-top: 1.5rem;
+}
+
+.applyFiltersButton {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.applyFiltersButton:hover {
+    background-color: #2563eb;
+}
+
+/* Mobile filter toggle button */
+.mobileFilterToggle {
+    display: none;
+    margin-bottom: 1rem;
+}
+
+.filterButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    color: #4b5563;
+    font-size: 0.875rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.filterCount {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 18px;
+    height: 18px;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1023px) {
+    .filtersContainer {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 80%;
+        max-width: 350px;
+        box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        padding: 1.5rem;
+        overflow-y: auto;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .showMobile {
+        left: 0;
+    }
+
+    .closeButton {
+        display: block;
+    }
+
+    .mobileApplyFilters {
+        display: block;
+        position: sticky;
+        bottom: 0;
+        background-color: white;
+        padding-top: 1rem;
+    }
+
+    .mobileFilterToggle {
+        display: block;
+    }
+}

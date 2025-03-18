@@ -1,0 +1,29 @@
+.suggestedProducts {
+    margin: var(--spacing-xl) 0;
+}
+
+.title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-md);
+}
+
+/* Responsive layout */
+@media (min-width: 640px) {
+    .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .productGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

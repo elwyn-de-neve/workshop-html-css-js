@@ -1,0 +1,159 @@
+.accountPage {
+    padding: 2rem 1rem;
+    min-height: 80vh;
+    background-color: #f9fafb;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pageTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Auth Container (Login/Register) */
+.authContainer {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.authTabs {
+    display: flex;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tabButton {
+    flex: 1;
+    padding: 1rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tabButton:hover {
+    color: #3b82f6;
+}
+
+.tabButton.active {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.authContent {
+    padding: 2rem;
+}
+
+/* Account Dashboard (Authenticated) */
+.accountDashboard {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.sidebar {
+    display: flex;
+    overflow-x: auto;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: none;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.navItem:hover {
+    color: #3b82f6;
+}
+
+.navItem.active {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+}
+
+.logoutButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-left: auto;
+    background: none;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ef4444;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.logoutButton:hover {
+    color: #dc2626;
+}
+
+.content {
+    padding: 2rem;
+    min-height: 400px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .accountDashboard {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        flex-direction: column;
+        width: 250px;
+        border-right: 1px solid #e5e7eb;
+        border-bottom: none;
+    }
+
+    .navItem {
+        padding: 1rem 1.5rem;
+        border-left: 3px solid transparent;
+    }
+
+    .navItem.active {
+        border-left: 3px solid #3b82f6;
+        border-bottom: none;
+        background-color: #f3f4f6;
+    }
+
+    .logoutButton {
+        margin-top: auto;
+        margin-left: 0;
+        padding: 1rem 1.5rem;
+    }
+
+    .content {
+        flex: 1;
+        min-height: 600px;
+    }
+}

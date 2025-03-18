@@ -1,0 +1,114 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Algemene Structuur en Implementatie Planning Prompt
+
+Deze instructies beschrijven de algemene planning en de stapsgewijze uitvoering van het een designs van een e-commerce project. Volg deze richtlijnen om een gestructureerde en consistente implementatie te garanderen.
+
+## 3.1 Project Setup
+1. **Vite en React Setup:**
+   - Maak een nieuw Vite-project met React.
+   - Installeer de benodigde dependencies: React Router DOM en Lucide icons.
+   
+2. **Mappenstructuur Inrichten:**
+   - Stel een duidelijke mappenhiërarchie in:
+     - `components/ui` voor herbruikbare UI-elementen (knoppen, invoervelden, iconen).
+     - `components/layout` voor layout-elementen (Navbar, Footer).
+     - `components/sections` voor specifieke secties (HeroSection, ProductGrid).
+     - `pages` voor volledige pagina’s (Home, Product, Cart, Checkout, Account, Contact, About, Blog, Admin).
+   - Creëer een map voor globale stijlen (bijv. `styles`) met een CSS-reset en globale variabelen (`globals.css`).
+
+## 3.2 Componenten en Bouwstenen Ontwikkelen
+1. **Basis Componenten Maken:**
+   - Ontwikkel herbruikbare componenten zoals `<Button />`, `<Input />`, en `<Icon />`.
+   - Zorg dat elk component minimale logica bevat en slechts één taak uitvoert.
+   - Maak voor elke component zowel een `.jsx`-bestand als een corresponderend `.module.css`-bestand.
+
+2. **Layout Componenten:**
+   - Bouw de basislayout met een consistente Navbar en Footer.
+   - Zorg voor een flexibele layout die in meerdere pagina’s hergebruikt kan worden.
+
+3. **Specifieke Secties:**
+   - Ontwikkel secties zoals HeroSection en ProductGrid voor de homepage.
+   - Zorg dat deze componenten de basis UI-elementen hergebruiken.
+
+## 3.3 Pagina’s en Features Implementeren
+1. **Homepage:**
+   - Combineer componenten zoals HeroSection en ProductGrid.
+   - Voeg elementen toe voor aanbiedingen, promoties en navigatie.
+
+2. **Productpagina:**
+   - Implementeer een gedetailleerde productpagina met een carousel/galerij, beschrijving, specificaties, prijsinformatie, klantbeoordelingen en voorraadindicatoren.
+   
+3. **Winkelwagentje (Cart):**
+   - Maak een overzicht van geselecteerde producten met functies voor het aanpassen van aantallen en verwijderen van items.
+   - Toon een totaalbedrag met een duidelijke samenvatting.
+
+4. **Checkout-pagina:**
+   - Bouw formulieren voor klantgegevens, verzendinformatie en betalingsmethoden.
+   - Zorg voor een order summary na de invoer van de gegevens.
+
+5. **Accountpagina:**
+   - Implementeer registratie- en inlogformulieren.
+   - Toon bestelgeschiedenis en profielbeheeropties.
+
+6. **Contact- en Over ons-pagina:**
+   - Maak een contactformulier en integreer bedrijfsinformatie en FAQ.
+   - Creëer een ‘Over ons’ pagina met bedrijfsinformatie, missie, visie en teamprofielen.
+
+7. **Blog/Nieuws & Zoekfunctie:**
+   - Ontwerp een overzichtspagina voor blogartikelen of nieuwsberichten.
+   - Voeg een zoekfunctie toe met een zoekbalk en filters.
+
+8. **Dashboard (Admin):**
+   - Bouw een admin-dashboard met functionaliteiten voor het toevoegen, bewerken en verwijderen van producten.
+
+## 3.4 Routing met React Router DOM
+- Definieer routes voor alle pagina’s:
+  - `/` → Homepage
+  - `/product/:id` → Productpagina
+  - `/cart` → Winkelwagentje
+  - `/checkout` → Checkout-pagina
+  - `/account` → Accountpagina
+  - `/contact` → Contactpagina
+  - `/about` → Over ons-pagina
+  - `/privacy` en `/terms` → Privacybeleid en Algemene Voorwaarden
+  - `/blog` → Blog/Nieuwssectie
+  - `/search` → Zoekfunctie
+  - `/admin` → Dashboard (Admin)
+
+## 3.5 Responsive Design & Testing
+1. **Responsiveness:**
+   - Zorg dat alle componenten en pagina’s responsive zijn met flexibele layouts en media queries.
+   - Test de applicatie op verschillende schermformaten (mobiel, tablet, desktop).
+
+2. **Iteratief Testen en Verbeteren:**
+   - Integreer en test componenten stapsgewijs.
+   - Pas de styling en componentlogica aan op basis van feedback en testresultaten.
+
+## 3.6 Implementatievolgorde
+1. **Fase 1 – Setup & Basisstructuur:**
+   - Project setup, mappenstructuur inrichten en globale stijlen implementeren.
+2. **Fase 2 – Herbruikbare Componenten:**
+   - Ontwikkel basis UI-componenten (Button, Input, Icon) en layout-componenten (Navbar, Footer).
+3. **Fase 3 – Pagina’s & Secties:**
+   - Bouw de homepage en andere pagina’s (Product, Cart, Checkout, Account, Contact, About, Blog).
+4. **Fase 4 – Routing & Integratie:**
+   - Configureer React Router DOM en test navigatie tussen pagina’s.
+5. **Fase 5 – Responsive Design & Fijnafstemming:**
+   - Implementeer responsieve stijlen en voer uitgebreide tests uit op diverse devices.
+
+## 3.7 Mock Data Integratie
+- **Gebruik van Mock Data:**
+  - Maak een JSON-bestand aan (bijv. `mockData.json`) waarin de productgegevens en andere relevante data worden gedefinieerd.
+  - Zorg dat alle onderdelen van de applicatie waar productdata nodig is, deze JSON-data gebruiken.
+  - Documenteer duidelijk dat deze mock data later zal worden vervangen door een API-koppeling.
+  - Integreer een simpele fetch/logica om de JSON-data in te laden in componenten, zodat de applicatie volledig functioneel is tijdens de ontwikkelingsfase.
+
+## 3.8 Notities
+- Implementeer alleen wat nodig is om over-engineering te voorkomen.
+- Richt je eerst op het visuele ontwerp; de logica (zoals state management en API-integraties) komt in een later stadium.
+- Documenteer elke stap en wees bereid kleine aanpassingen door te voeren tijdens de ontwikkeling.
+

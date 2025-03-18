@@ -1,0 +1,146 @@
+.contactForm {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.required {
+    color: #ef4444;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 12px;
+    color: #9ca3af;
+    pointer-events: none;
+}
+
+.inputWrapper input {
+    padding-left: 2.75rem;
+    width: 100%;
+}
+
+.textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.inputError {
+    border-color: #ef4444 !important;
+}
+
+.errorText {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin: 0.25rem 0 0;
+}
+
+.submitButton {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.buttonIcon {
+    margin-left: 0.25rem;
+}
+
+.successMessage {
+    background-color: #ecfdf5;
+    border: 1px solid #d1fae5;
+    color: #047857;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .contactForm {
+        padding: 1.25rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.875rem;
+    }
+
+    .submitButton {
+        width: 100%;
+        justify-content: center;
+    }
+}

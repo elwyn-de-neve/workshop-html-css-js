@@ -1,0 +1,78 @@
+.product-grid {
+    display: grid;
+    width: 100%;
+}
+
+/* Gap variations */
+.product-grid--gap-small {
+    gap: var(--spacing-sm);
+}
+
+.product-grid--gap-medium {
+    gap: var(--spacing-md);
+}
+
+.product-grid--gap-large {
+    gap: var(--spacing-lg);
+}
+
+/* Mobile grid configurations */
+.product-grid--mobile-1 {
+    grid-template-columns: 1fr;
+}
+
+.product-grid--mobile-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Tablet grid configurations (768px and up) */
+@media (min-width: 768px) {
+    .product-grid--tablet-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-grid--tablet-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-grid--tablet-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Desktop grid configurations (1024px and up) */
+@media (min-width: 1024px) {
+    .product-grid--desktop-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-grid--desktop-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .product-grid--desktop-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .product-grid--desktop-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.product-grid-item {
+    min-width: 0;
+    /* Prevent grid items from overflowing */
+    height: 100%;
+}
+
+/* Empty items for maintaining grid alignment */
+.product-grid-item--empty {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .product-grid-item--empty {
+        display: block;
+        visibility: hidden;
+    }
+}

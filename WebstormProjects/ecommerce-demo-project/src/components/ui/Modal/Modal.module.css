@@ -1,0 +1,139 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-md);
+    z-index: 1000;
+    animation: fadeIn 0.2s ease-out;
+}
+
+.modal {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    max-height: calc(100vh - var(--spacing-2xl));
+    overflow-y: auto;
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Modal sizes */
+.modal--small {
+    max-width: 400px;
+}
+
+.modal--medium {
+    max-width: 600px;
+}
+
+.modal--large {
+    max-width: 800px;
+}
+
+.modal--full {
+    max-width: 1200px;
+}
+
+/* Header */
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.close-button {
+    padding: var(--spacing-xs) !important;
+    min-width: unset !important;
+    border: none !important;
+}
+
+.close-button:hover {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Content */
+.modal-content {
+    padding: var(--spacing-md);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Scrollbar styling */
+.modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-full);
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background: var(--text-light);
+    border-radius: var(--radius-full);
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .backdrop {
+        padding: var(--spacing-sm);
+    }
+
+    .modal {
+        max-height: calc(100vh - var(--spacing-lg));
+    }
+
+    .modal--small,
+    .modal--medium {
+        max-width: 100%;
+    }
+
+    .modal-header {
+        padding: var(--spacing-sm);
+    }
+
+    .modal-content {
+        padding: var(--spacing-sm);
+    }
+}

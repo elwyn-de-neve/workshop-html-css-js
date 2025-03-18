@@ -1,0 +1,248 @@
+.productDescription {
+    margin: var(--spacing-2xl) 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+}
+
+.tab {
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--text-base);
+    font-weight: 500;
+    color: var(--text-secondary);
+    position: relative;
+    transition: color 0.2s;
+}
+
+.tab:hover {
+    color: var(--color-primary);
+}
+
+.tab.active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+/* Tab Content */
+.tabContent {
+    padding: var(--spacing-xl);
+    background-color: var(--bg-primary);
+}
+
+.tabContent h2 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+}
+
+/* Description */
+.description {
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.description p {
+    margin-bottom: var(--spacing-md);
+}
+
+.description ul,
+.description ol {
+    margin-left: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.description img {
+    max-width: 100%;
+    height: auto;
+    margin: var(--spacing-md) 0;
+    border-radius: var(--radius-sm);
+}
+
+/* Specifications */
+.specifications {
+    color: var(--text-secondary);
+}
+
+.specsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specsTable tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.specsTable tr:last-child {
+    border-bottom: none;
+}
+
+.specsTable th,
+.specsTable td {
+    padding: var(--spacing-md);
+    text-align: left;
+}
+
+.specsTable th {
+    width: 30%;
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+}
+
+/* Reviews */
+.reviews {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.reviewsSummary {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-xl);
+}
+
+.ratingOverview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.averageRating {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.ratingValue {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.reviewCount {
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+}
+
+.ratingBreakdown {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+}
+
+.ratingBar {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.star {
+    width: 60px;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.barContainer {
+    flex: 1;
+    height: 8px;
+    background-color: var(--bg-accent);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    background-color: var(--color-primary);
+}
+
+.barPercentage {
+    width: 40px;
+    text-align: right;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.reviewsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.reviewItem {
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-secondary);
+}
+
+.reviewHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+}
+
+.reviewTitle {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.reviewMeta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.reviewContent {
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.noReviews {
+    color: var(--text-secondary);
+    font-style: italic;
+    text-align: center;
+    padding: var(--spacing-xl);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .ratingOverview {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .averageRating {
+        flex-basis: 30%;
+    }
+
+    .ratingBreakdown {
+        flex-basis: 70%;
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,142 @@
+.orderSummary {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+}
+
+.title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.summaryItems {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.summaryItem {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+}
+
+.total {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: var(--spacing-sm) 0;
+}
+
+.freeShipping {
+    color: #10b981;
+    /* Green */
+    font-weight: 500;
+}
+
+.discount {
+    color: #ef4444;
+    /* Red */
+}
+
+.freeShippingMessage,
+.shippingUpsell {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    text-align: center;
+}
+
+.freeShippingMessage {
+    background-color: rgba(16, 185, 129, 0.1);
+    /* Light green */
+    color: #10b981;
+    /* Green */
+}
+
+.shippingUpsell {
+    background-color: rgba(245, 158, 11, 0.1);
+    /* Light amber */
+    color: var(--color-accent);
+}
+
+.promoCodeSection {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.promoCodeSection h3 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.promoForm {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.promoInput {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-base);
+}
+
+.promoInput:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.promoButton {
+    white-space: nowrap;
+}
+
+.promoError {
+    color: #ef4444;
+    /* Red */
+    font-size: var(--text-sm);
+    margin-top: var(--spacing-xs);
+}
+
+.promoSuccess {
+    color: #10b981;
+    /* Green */
+    font-size: var(--text-sm);
+    margin-top: var(--spacing-xs);
+}
+
+.checkoutButtonContainer {
+    margin-top: var(--spacing-xl);
+}
+
+.checkoutLink {
+    text-decoration: none;
+    display: block;
+}
+
+.checkoutButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .orderSummary {
+        padding: var(--spacing-xl);
+    }
+}

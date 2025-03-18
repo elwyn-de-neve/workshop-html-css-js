@@ -1,0 +1,128 @@
+.teamMembers {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.memberCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.memberCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.memberImageContainer {
+    width: 100%;
+    padding-top: 100%;
+    /* 1:1 Aspect Ratio */
+    position: relative;
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+
+.memberImagePlaceholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b82f6;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.memberInfo {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.memberName {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+}
+
+.memberRole {
+    font-size: 0.875rem;
+    color: #3b82f6;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.memberBio {
+    color: #6b7280;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    color: #6b7280;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.socialLink:hover {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+    .teamGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .teamGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

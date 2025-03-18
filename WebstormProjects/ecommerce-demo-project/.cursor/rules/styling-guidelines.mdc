@@ -1,0 +1,61 @@
+---
+description: 
+globs: *.css
+alwaysApply: false
+---
+# CSS Module Prompt
+
+Deze instructies gelden voor het schrijven van alle CSS-bestanden in ons e-commerce project. Volg de onderstaande richtlijnen voor consistente, schaalbare en onderhoudbare styling.
+
+## 2.1 Algemene Richtlijnen
+- **CSS Modules:** Gebruik voor iedere component een eigen `.module.css`-bestand om scope-conflicten te vermijden.
+- **BEM-Namingconventie:** Hanteer de BEM-methodologie voor duidelijke en consistente classnamen.
+- **Globale CSS-variabelen:** Definieer globale variabelen voor kleuren, typografie, spacing, enzovoorts in een centraal bestand (bijv. `globals.css`).
+- **CSS Reset:** Integreer een CSS-reset of normalize stylesheet om browserspecifieke afwijkingen te neutraliseren.
+- **Responsiveness:** Zorg dat de stijlen flexibel zijn en maak gebruik van media queries om de applicatie responsive te maken.
+
+## 2.2 Stappenplan voor een Nieuw CSS-bestand
+1. **Bestandsstructuur Aanmaken:**
+   - Maak een nieuw `.module.css`-bestand aan met dezelfde naam als de bijbehorende component (bijv. `Button.module.css`).
+
+2. **Basisopmaak:**
+   - Gebruik een vergelijkbare stijl zoals ShadcnUI
+   - Stel basisstijlregels in voor het component.
+   - Gebruik de BEM-namingconventie voor classnamen. Bijvoorbeeld:
+     ```css
+     .button {
+       /* basis styling */
+       padding: var(--spacing-medium);
+       background-color: var(--primary-color);
+       border: none;
+       border-radius: 4px;
+       cursor: pointer;
+     }
+     ```
+
+3. **Globale Variabelen & CSS Reset:**
+   - Zorg dat je globale CSS-variabelen gebruikt (bijv. uit `globals.css`).
+   - Implementeer een CSS-reset in je globale stylesheet en importeer dit indien nodig.
+
+4. **Responsiveness & Media Queries:**
+   - Voeg media queries toe om de component aan te passen voor verschillende schermgroottes:
+     ```css
+     @media (max-width: 768px) {
+       .button {
+         padding: var(--spacing-small);
+       }
+     }
+     ```
+
+5. **Herbruikbaarheid & Onderhoud:**
+   - Houd de CSS zo modulair mogelijk.
+   - Vermijd het dupliceren van stijlregels. Hergebruik variabelen en mixins waar mogelijk.
+   - Documenteer complexe stijlen of uitzonderlijke regels met comments.
+
+6. **Review & Testing:**
+   - Test de stijlen in combinatie met de bijbehorende component.
+   - Controleer de weergave op verschillende devices (desktop, tablet, mobiel).
+
+## 2.3 Notities
+- Focus op een consistente visuele stijl door het hele project.
+- Zorg dat de CSS makkelijk uitbreidbaar en aanpasbaar is zonder over-engineering.

@@ -1,0 +1,127 @@
+.profileInfo {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .formGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 12px;
+    color: #6b7280;
+}
+
+.inputError {
+    border-color: #ef4444 !important;
+}
+
+.errorText {
+    color: #ef4444;
+    font-size: 0.75rem;
+    margin: 0.25rem 0 0;
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.cancelButton {
+    min-width: 100px;
+}
+
+.saveButton {
+    min-width: 120px;
+}
+
+/* Profile view styles */
+.profileDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.detailItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background-color: #f9fafb;
+}
+
+.detailIcon {
+    color: #4f46e5;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.detailContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.detailLabel {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+
+.detailValue {
+    font-size: 1rem;
+    color: #1f2937;
+    font-weight: 500;
+}
